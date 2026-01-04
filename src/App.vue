@@ -6,12 +6,6 @@
                 <div class="input-group">
                     <input type="text" id="title" name="newTitle" v-model="newTask.title" placeholder="Title" required=""/>
                     <input type="text" id="description" name="newDescription" v-model="newTask.description" placeholder="Description"  required=""/>
-                    <select name="newPriority" id="priority" required="">
-                        <option disabled selected>Priority</option>
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
                 </div>
                 <button type="submit" class="primary-button">Add</button>
             </form>
@@ -19,7 +13,7 @@
                 <ul>
                     <li v-for="task in tasks" :key="task">
                         <p class="font-regular">{{ task.title }}</p>
-                        <p class="font-small">{{ task.description }}</p>
+                        <p class="font-small">{{ task.userId }}</p>
                         <button class="btn-danger" @click="deleteTask(task.id)">X</button>
                     </li>
                 </ul>
@@ -42,7 +36,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height:100vh;
 }
 .task-form {
     margin-top: 50px;
@@ -79,43 +72,16 @@ select {
 </style>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const newTask = ref({
-    id: "",
     title: "",
-    description: "",
-    status: "active",
-    priority: "",
-    due_date: ""
+    completed: "",
+    userId: "",
+    id: ""
 });
 
-const tasks = ref([
-    {
-        id: 1,
-        title: "Buy groceries",
-        description: "Milk, eggs, bread, and fruits",
-        status: "pending",
-        priority: "medium",
-        due_date: "2026-01-05"
-    },
-    {
-        id: 2,
-        title: "Finish report",
-        description: "Complete the monthly sales report",
-        status: "in_progress",
-        priority: "high",
-        due_date: "2026-01-03"
-    },
-    {
-        id: 3,
-        title: "Workout",
-        description: "30-minute cardio session",
-        status: "completed",
-        priority: "low",
-        due_date: "2026-01-02"
-    }
-]);
+const tasks = ref([]);
 
 
 const addTask = () => {
@@ -123,10 +89,9 @@ const addTask = () => {
         tasks.value.push(newTask.value)
         newTask.value = {
             title: "",
-            description: "",
-            status: "active",
-            priority: "",
-            due_date: ""
+            completed: "",
+            userId: "",
+            id: ""
         }
     }
 }
@@ -135,5 +100,16 @@ const deleteTask = (id) => {
     const updatedTask = tasks.value.filter(task => task.id !== id)
     tasks.value = updatedTask
 }
+
+// Lifecycle
+onMounted(async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+        const data = await response.json()
+        tasks.value = data
+    } catch (error) {
+        console.error(error)
+    }
+})
 
 </script>
