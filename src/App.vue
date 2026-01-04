@@ -20,6 +20,7 @@
                     <li v-for="task in tasks" :key="task">
                         <p class="font-regular">{{ task.title }}</p>
                         <p class="font-small">{{ task.description }}</p>
+                        <button class="btn-danger" @click="deleteTask(task.id)">X</button>
                     </li>
                 </ul>
             </div>
@@ -28,6 +29,15 @@
 </template>
 
 <style>
+.btn-danger {
+    color: #f10a19;
+    border: unset;
+    background-color: unset;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
 .task-main {
     display: flex;
     align-items: center;
@@ -51,9 +61,7 @@ input {
     border-left: solid 3px #0af119;
     padding: 15px;
     margin: 10px 0;
-}
-.task-list li:hover {
-    transform: scale(1.1);
+    position: relative;
 }
 .font-regular {
     font-size: 18px;
@@ -74,6 +82,7 @@ select {
 import { ref } from 'vue'
 
 const newTask = ref({
+    id: "",
     title: "",
     description: "",
     status: "active",
@@ -83,25 +92,28 @@ const newTask = ref({
 
 const tasks = ref([
     {
-      "title": "Buy groceries",
-      "description": "Milk, eggs, bread, and fruits",
-      "status": "pending",
-      "priority": "medium",
-      "due_date": "2026-01-05"
+        id: 1,
+        title: "Buy groceries",
+        description: "Milk, eggs, bread, and fruits",
+        status: "pending",
+        priority: "medium",
+        due_date: "2026-01-05"
     },
     {
-      "title": "Finish report",
-      "description": "Complete the monthly sales report",
-      "status": "in_progress",
-      "priority": "high",
-      "due_date": "2026-01-03"
+        id: 2,
+        title: "Finish report",
+        description: "Complete the monthly sales report",
+        status: "in_progress",
+        priority: "high",
+        due_date: "2026-01-03"
     },
     {
-      "title": "Workout",
-      "description": "30-minute cardio session",
-      "status": "completed",
-      "priority": "low",
-      "due_date": "2026-01-02"
+        id: 3,
+        title: "Workout",
+        description: "30-minute cardio session",
+        status: "completed",
+        priority: "low",
+        due_date: "2026-01-02"
     }
 ]);
 
@@ -117,6 +129,11 @@ const addTask = () => {
             due_date: ""
         }
     }
+}
+
+const deleteTask = (id) => {
+    const updatedTask = tasks.value.filter(task => task.id !== id)
+    tasks.value = updatedTask
 }
 
 </script>
