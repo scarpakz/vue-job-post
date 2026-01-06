@@ -10,7 +10,7 @@
           {{ props.description }}
         </p>
 
-        <!-- Optional Button -->
+        <!-- Optional Button
         <div class="mt-8 flex justify-center lg:justify-center space-x-4">
           <a href="#"
              class="rounded-md bg-white text-indigo-700 px-6 py-3 font-medium hover:bg-white/90 transition">
@@ -20,7 +20,7 @@
              class="rounded-md border border-white px-6 py-3 font-medium hover:bg-white/10 transition">
             Learn More
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
