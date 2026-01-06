@@ -13,7 +13,7 @@
                 <ul>
                     <li v-for="task in tasks" :key="task">
                         <p class="font-regular">{{ task.title }}</p>
-                        <p class="font-small">{{ task.userId }}</p>
+                        <p class="font-small">{{ task.id }}</p>
                         <button class="btn-danger" @click="deleteTask(task.id)">X</button>
                     </li>
                 </ul>
