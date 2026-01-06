@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
             <div class="rounded-lg bg-indigo-200 px-4 py-4 lg:block md:block grid justify-center items-center">
                 <h2 class="text-black font-bold text-3xl text-center md:text-left lg:text-3xl">For Developers</h2>
                 <p class="text-black/80 mb-5 text-center md:text-left">Explore jobs built for developers</p>
