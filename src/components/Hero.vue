@@ -4,10 +4,10 @@
       <div class="py-20 text-center lg:text-center">
         <!-- Hero Text -->
         <h1 class="text-4xl font-bold sm:text-5xl lg:text-6xl">
-          {{ title }}
+          {{ props.title }}
         </h1>
         <p class="mt-4 text-lg sm:text-xl lg:text-2xl text-white/80">
-          {{ description }}
+          {{ props.description }}
         </p>
 
         <!-- Optional Button -->
@@ -29,9 +29,8 @@
 
 </style>
 <script setup>
-import { defineProps } from 'vue';
 
-defineProps({
+const props = defineProps({
   title: { type: String, default: "Looking for a Job?" },
   description: { type: String, default: "Find the skills you need" }
 })
