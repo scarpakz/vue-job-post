@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar />
-        <Hero />
+        <Hero title="Looking for a Developer Job?" description="Find the skills you need"/>
     </div>
 </template>
 <script setup>
