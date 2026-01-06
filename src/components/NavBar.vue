@@ -18,6 +18,6 @@
   
 
 <script setup>
-import navbarbg from '@/images/navbar-bg.png'
+import navbarbg from '@/images/3d-briefcase.png'
 
 </script>
