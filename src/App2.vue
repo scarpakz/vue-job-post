@@ -3,7 +3,7 @@
         <NavBar />
         <Hero title="Looking for a Developer Job?" description="Find the skills you need"/>
         <CardFinder />
-        <Jobs />
+        <Jobs :limit="3" :showButton="true" />
     </div>
 </template>
 <script setup>

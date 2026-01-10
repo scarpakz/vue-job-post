@@ -7,11 +7,21 @@
                 <!-- Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <Lists 
-                    v-for="job in jobs"
+                    v-for="job in jobs.slice(0, limit || jobs.length)"
                     :job="job"
                     :key="job.id"
                     />
                 </div>
+            </div>
+            <div class="flex justify-center mt-8"
+            v-if="showButton"
+            >
+                <button
+                    type="button"
+                    class="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition cursor-pointer"
+                >
+                    View All Jobs
+                </button>
             </div>
         </section>
     </div>
@@ -21,6 +31,15 @@
 import {ref} from 'vue'
 import Lists from '@/components/joblists/Lists.vue'
 
+defineProps({
+    limit: {
+        default: 6
+    },
+    showButton: {
+        type: Boolean,
+        default: false
+    }
+})
 const jobs = ref(
     [
         {
@@ -72,7 +91,6 @@ const jobs = ref(
             salary: "$55,000 - $75,000/year"
         }
     ]
-
 )
 
 </script>

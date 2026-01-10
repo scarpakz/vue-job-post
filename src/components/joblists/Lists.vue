@@ -8,7 +8,7 @@
         <p class="font-semibold text-gray-800 mb-4">{{ job.salary }}</p>
         <button 
         @click="goToJobDetails(job.id)"
-        class="mt-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+        class="mt-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition cursor-pointer">
         Read More
         </button>
     </div>
