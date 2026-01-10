@@ -9,6 +9,7 @@
                     <Lists 
                     v-for="job in jobs"
                     :job="job"
+                    :key="job.id"
                     />
                 </div>
             </div>
@@ -23,6 +24,7 @@ import Lists from '@/components/joblists/Lists.vue'
 const jobs = ref(
     [
         {
+            id: 1,
             type: "Full Time",
             title: "Frontend Developer",
             description: "Build and maintain user interfaces for our web apps using Vue.js and Tailwind CSS.",
@@ -30,6 +32,7 @@ const jobs = ref(
             salary: "$60,000 - $80,000/year"
         },
         {
+            id: 2,
             type: "Full Time",
             title: "Backend Developer",
             description: "Design and implement scalable APIs and manage databases with Node.js and PostgreSQL.",
@@ -37,6 +40,7 @@ const jobs = ref(
             salary: "$65,000 - $90,000/year"
         },
         {
+            id: 3,
             type: "Full Time",
             title: "Full Stack Developer",
             description: "Work across front and backend to deliver complete web solutions for clients.",
@@ -44,6 +48,7 @@ const jobs = ref(
             salary: "$70,000 - $95,000/year"
         },
         {
+            id: 4,
             type: "Full Time",
             title: "Mobile Developer",
             description: "Create cross-platform mobile apps using Flutter or React Native.",
@@ -51,6 +56,7 @@ const jobs = ref(
             salary: "$60,000 - $85,000/year"
         },
         {
+            id: 5,
             type: "Full Time",
             title: "DevOps Engineer",
             description: "Manage cloud infrastructure, CI/CD pipelines, and deployment workflows.",
@@ -58,6 +64,7 @@ const jobs = ref(
             salary: "$75,000 - $100,000/year"
         },
         {
+            id: 6,
             type: "Full Time",
             title: "UI/UX Designer",
             description: "Design intuitive interfaces and improve user experience for web and mobile apps.",

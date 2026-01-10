@@ -6,14 +6,23 @@
         <p class="text-gray-600 mb-2">{{ job.description }}</p>
         <p class="text-gray-500 mb-4">📍 {{ job.location }}</p>
         <p class="font-semibold text-gray-800 mb-4">{{ job.salary }}</p>
-        <button class="mt-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+        <button 
+        @click="goToJobDetails(job.id)"
+        class="mt-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
         Read More
         </button>
     </div>
 </template>
 <script setup>
+import { useRouter } from 'vue-router';
 
 const props = defineProps({
     job: { type: Object }
 })
+
+const router = useRouter();
+
+const goToJobDetails = (id, slug) => {
+    router.push(`/jobs/${id}`)
+}
 </script>
