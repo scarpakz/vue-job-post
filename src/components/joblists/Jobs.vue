@@ -43,12 +43,12 @@ defineProps({
 const jobs = ref(
     [
         {
-        id: 1,
-        type: "Full Time",
-        title: "Frontend Developer",
-        description: "Build, maintain, and optimize modern user interfaces for our web applications using Vue.js and Tailwind CSS. You will collaborate closely with designers and backend developers to translate UI/UX designs into clean, responsive, and accessible components while ensuring cross-browser compatibility and high performance.",
-        location: "New York, NY",
-        salary: "$60,000 - $80,000/year"
+            id: 1,
+            type: "Full Time",
+            title: "Frontend Developer",
+            description: "Build, maintain, and optimize modern user interfaces for our web applications using Vue.js and Tailwind CSS. You will collaborate closely with designers and backend developers to translate UI/UX designs into clean, responsive, and accessible components while ensuring cross-browser compatibility and high performance.",
+            location: "New York, NY",
+            salary: "$60,000 - $80,000/year"
         },
         {
             id: 2,

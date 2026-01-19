@@ -7,17 +7,17 @@
           </div>
           <!-- Navigation links -->
           <div class="hidden sm:flex space-x-4">
-            <a href="#" aria-current="page" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-white text-white hover:text-indigo-800">Home</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white hover:text-indigo-800">Jobs</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white hover:text-indigo-800">Add Job</a>
+            <RouterLink :to="{ name: 'home' }"  aria-current="page" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-white text-white hover:text-indigo-800">Home</RouterLink>
+            <RouterLink :to="{ name: 'home' }" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white hover:text-indigo-800">Jobs</RouterLink>
+            <RouterLink :to="{ name: 'home' }" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white hover:text-indigo-800">Add Job</RouterLink>
           </div>
         </div>
       </div>
     </nav>
 </template>
-  
 
 <script setup>
-import navbarbg from '@/images/3d-briefcase.png'
+import navbarbg from '@/images/3d-briefcase.png';
+import { RouterLink } from 'vue-router';
 
 </script>

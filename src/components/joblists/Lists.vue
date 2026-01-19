@@ -5,16 +5,13 @@
         <h3 class="text-xl font-bold mb-2">{{ job.title }}</h3>
         <p class="text-gray-600 mb-2">{{ showFullDescription ? job.description : truncatedDescription }}</p>
         <a @click="toggleDescription" class="cursor-pointer text-blue-400 mb-4 hover:text-blue-500">{{ showFullDescription ? 'Read Less' : 'Read More..' }}</a>
-        <p class="text-gray-500 mb-4">📍 {{ job.location }}</p>
+        <p class="text-gray-500 mb-4"><i class="pi pi-map-marker text-red-700"></i> {{ job.location }}</p>
         <p class="font-semibold text-gray-800 mb-4">{{ job.salary }}</p>
-        <!-- <button 
+        
+        <button 
         @click="goToJobDetails(job.id)"
         class="mt-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition cursor-pointer">
         Read More
-        </button> -->
-        <button 
-        class="mt-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition cursor-pointer">
-        View Job
         </button>
     </div>
 </template>
