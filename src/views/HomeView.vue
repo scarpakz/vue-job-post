@@ -1,7 +1,7 @@
 <template>
     <Hero title="Looking for a Developer Job?" description="Find the skills you need"/>
     <CardFinder />
-    <Jobs :limit="3" :showButton="true" />
+    <Jobs :limit="6" :showButton="true" />
 </template>
 
 <style>

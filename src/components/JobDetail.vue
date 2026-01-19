@@ -14,10 +14,10 @@
 
             <div class="mt-2 flex flex-wrap gap-4 text-gray-600">
                 <span class="flex items-center gap-1">
-                📍 New York, NY
+                <i class="pi pi-map-marker text-red-700"></i> New York, NY
                 </span>
                 <span class="flex items-center gap-1">
-                💰 $60,000 - $80,000/year
+                <i class="pi pi-dollar text-green-700"></i>60,000 - <i class="pi pi-dollar text-green-700"></i>80,000/year
                 </span>
             </div>
             </div>
