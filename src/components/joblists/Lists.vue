@@ -4,7 +4,7 @@
         <span class="text-sm font-semibold text-indigo-600 mb-2">{{ job.type }}</span>
         <h3 class="text-xl font-bold mb-2">{{ job.title }}</h3>
         <p class="text-gray-600 mb-2">{{ showFullDescription ? job.description : truncatedDescription }}</p>
-        <!-- TODO: Add see more text here,toggle link and replaced the button below "View Job" -->
+        <a @click="toggleDescription" class="cursor-pointer text-blue-400 mb-4 hover:text-blue-500">{{ showFullDescription ? 'Read Less' : 'Read More..' }}</a>
         <p class="text-gray-500 mb-4">📍 {{ job.location }}</p>
         <p class="font-semibold text-gray-800 mb-4">{{ job.salary }}</p>
         <!-- <button 
@@ -13,9 +13,8 @@
         Read More
         </button> -->
         <button 
-        @click="toggleDescription"
         class="mt-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition cursor-pointer">
-        {{ showFullDescription ? 'Read Less' : 'Read More' }}
+        View Job
         </button>
     </div>
 </template>
