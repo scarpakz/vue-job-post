@@ -9,18 +9,6 @@
         <p class="mt-4 text-lg sm:text-xl lg:text-2xl text-white/80">
           {{ props.description }}
         </p>
-
-        <!-- Optional Button
-        <div class="mt-8 flex justify-center lg:justify-center space-x-4">
-          <a href="#"
-             class="rounded-md bg-white text-indigo-700 px-6 py-3 font-medium hover:bg-white/90 transition">
-            Get Started
-          </a>
-          <a href="#"
-             class="rounded-md border border-white px-6 py-3 font-medium hover:bg-white/10 transition">
-            Learn More
-          </a>
-        </div> -->
       </div>
     </div>
   </section>

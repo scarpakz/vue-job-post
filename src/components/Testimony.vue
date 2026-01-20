@@ -54,7 +54,7 @@
 </style>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from "vue"
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
 const testimonials = ref([
   {

@@ -16,12 +16,13 @@
             <div class="flex justify-center mt-8"
             v-if="showButton"
             >
-                <button
+                <RouterLink
+                    :to="{ name: 'jobs' }"
                     type="button"
                     class="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition cursor-pointer"
                 >
                     View All Jobs
-                </button>
+                </RouterLink>
             </div>
         </section>
     </div>
@@ -29,8 +30,9 @@
   
 <script setup>
 import {ref} from 'vue'
+import { RouterLink } from 'vue-router'
 import Lists from '@/components/joblists/Lists.vue'
-import joblists from '@/mockdata/joblists.json';
+import joblists from '@/mockdata/joblists.json'
 
 defineProps({
     limit: { 
