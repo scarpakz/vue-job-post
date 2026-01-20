@@ -2,6 +2,7 @@
     <div>
         <NavBar />
         <RouterView />
+        <!-- TODO: Add Footer -->
     </div>
 </template>
 <script setup>
