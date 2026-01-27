@@ -9,11 +9,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server --watch src/mockdata/db.json --port 5000"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "@tailwindplus/elements": "^1.0.22",
+    "json-server": "^0.17.4",
     "primeicons": "^7.0.0",
     "tailwindcss": "^4.1.18",
     "vue": "^3.5.26",

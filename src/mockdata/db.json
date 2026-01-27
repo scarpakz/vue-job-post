@@ -1,0 +1,204 @@
+{
+    "jobs": [
+        {
+          "id": 1,
+          "type": "Full Time",
+          "title": "Frontend Developer",
+          "location": "New York, NY",
+          "salary": "$60,000 - $80,000/year",
+          "description": "Build, maintain, and optimize modern user interfaces for web applications using Vue.js and Tailwind CSS. Collaborate with designers and backend developers to deliver clean, responsive, and accessible components.",
+          "responsibilities": [
+            "Develop responsive UI components using Vue.js",
+            "Implement designs using Tailwind CSS",
+            "Collaborate with designers and backend developers",
+            "Optimize applications for performance and accessibility"
+          ],
+          "requirements": [
+            "Experience with Vue.js",
+            "Strong HTML, CSS, and JavaScript skills",
+            "Familiarity with Tailwind CSS",
+            "Attention to UI/UX best practices"
+          ]
+        },
+        {
+          "id": 2,
+          "type": "Full Time",
+          "title": "Backend Developer",
+          "location": "San Francisco, CA",
+          "salary": "$70,000 - $95,000/year",
+          "description": "Design and maintain scalable backend systems and APIs using Node.js. Ensure data integrity, security, and high availability across services.",
+          "responsibilities": [
+            "Build RESTful APIs",
+            "Manage databases and server logic",
+            "Implement authentication and authorization",
+            "Optimize backend performance"
+          ],
+          "requirements": [
+            "Experience with Node.js",
+            "Knowledge of SQL or NoSQL databases",
+            "Understanding of API design",
+            "Problem-solving skills"
+          ]
+        },
+        {
+          "id": 3,
+          "type": "Full Time",
+          "title": "Full Stack Developer",
+          "location": "Austin, TX",
+          "salary": "$75,000 - $100,000/year",
+          "description": "Work on both frontend and backend systems to deliver complete web solutions from concept to deployment.",
+          "responsibilities": [
+            "Develop frontend and backend features",
+            "Integrate APIs and third-party services",
+            "Collaborate with cross-functional teams",
+            "Maintain code quality and documentation"
+          ],
+          "requirements": [
+            "Experience with frontend and backend frameworks",
+            "Strong JavaScript knowledge",
+            "Understanding of databases",
+            "Ability to work independently"
+          ]
+        },
+        {
+          "id": 4,
+          "type": "Full Time",
+          "title": "Mobile Developer",
+          "location": "Seattle, WA",
+          "salary": "$65,000 - $85,000/year",
+          "description": "Build cross-platform mobile applications with a focus on performance, usability, and clean architecture.",
+          "responsibilities": [
+            "Develop mobile apps using Flutter or React Native",
+            "Integrate APIs",
+            "Optimize app performance",
+            "Fix bugs and maintain releases"
+          ],
+          "requirements": [
+            "Experience with mobile frameworks",
+            "Understanding of mobile UI principles",
+            "API integration experience",
+            "Testing and debugging skills"
+          ]
+        },
+        {
+          "id": 5,
+          "type": "Full Time",
+          "title": "UI/UX Designer",
+          "location": "Los Angeles, CA",
+          "salary": "$55,000 - $75,000/year",
+          "description": "Design intuitive and visually appealing interfaces that enhance user experience across platforms.",
+          "responsibilities": [
+            "Create wireframes and prototypes",
+            "Collaborate with developers",
+            "Conduct usability testing",
+            "Refine designs based on feedback"
+          ],
+          "requirements": [
+            "Experience with design tools",
+            "Strong UI/UX fundamentals",
+            "Attention to detail",
+            "Good communication skills"
+          ]
+        },
+        {
+          "id": 6,
+          "type": "Full Time",
+          "title": "DevOps Engineer",
+          "location": "Boston, MA",
+          "salary": "$80,000 - $110,000/year",
+          "description": "Manage cloud infrastructure and deployment pipelines to ensure reliable and scalable systems.",
+          "responsibilities": [
+            "Maintain CI/CD pipelines",
+            "Manage cloud infrastructure",
+            "Monitor system performance",
+            "Improve deployment workflows"
+          ],
+          "requirements": [
+            "Experience with cloud platforms",
+            "Knowledge of CI/CD tools",
+            "Linux system administration",
+            "Security best practices"
+          ]
+        },
+        {
+          "id": 7,
+          "type": "Contract",
+          "title": "QA Engineer",
+          "location": "Remote",
+          "salary": "$40/hr - $60/hr",
+          "description": "Ensure software quality through manual and automated testing processes.",
+          "responsibilities": [
+            "Write and execute test cases",
+            "Report and track bugs",
+            "Collaborate with developers",
+            "Improve testing workflows"
+          ],
+          "requirements": [
+            "Experience in software testing",
+            "Attention to detail",
+            "Knowledge of testing tools",
+            "Strong analytical skills"
+          ]
+        },
+        {
+          "id": 8,
+          "type": "Part Time",
+          "title": "Technical Writer",
+          "location": "Remote",
+          "salary": "$30/hr - $45/hr",
+          "description": "Create clear and concise technical documentation for developers and end users.",
+          "responsibilities": [
+            "Write technical documentation",
+            "Collaborate with engineering teams",
+            "Maintain documentation updates",
+            "Ensure clarity and accuracy"
+          ],
+          "requirements": [
+            "Strong writing skills",
+            "Technical background",
+            "Attention to detail",
+            "Ability to simplify complex topics"
+          ]
+        },
+        {
+          "id": 9,
+          "type": "Full Time",
+          "title": "Product Manager",
+          "location": "Chicago, IL",
+          "salary": "$85,000 - $120,000/year",
+          "description": "Lead product development from ideation to launch while aligning business and technical goals.",
+          "responsibilities": [
+            "Define product requirements",
+            "Coordinate with teams",
+            "Manage product roadmap",
+            "Analyze user feedback"
+          ],
+          "requirements": [
+            "Product management experience",
+            "Strong communication skills",
+            "Understanding of agile workflows",
+            "Leadership ability"
+          ]
+        },
+        {
+          "id": 10,
+          "type": "Internship",
+          "title": "Junior Web Developer",
+          "location": "Toronto, ON",
+          "salary": "$20/hr - $25/hr",
+          "description": "Assist in building and maintaining web applications while gaining hands-on development experience.",
+          "responsibilities": [
+            "Assist with frontend development",
+            "Fix minor bugs",
+            "Learn best coding practices",
+            "Support senior developers"
+          ],
+          "requirements": [
+            "Basic HTML, CSS, and JavaScript knowledge",
+            "Willingness to learn",
+            "Good communication skills",
+            "Team-oriented mindset"
+          ]
+        }
+    ]
+}
