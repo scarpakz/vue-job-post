@@ -1,38 +1,33 @@
-# vue-starter
+# Project Setup
 
-This template should help get you started developing with Vue 3 in Vite.
+This project includes a front-end and a back-end.
 
-## Recommended IDE Setup
+## Installation
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Run this command first to install dependencies:
 
 ```sh
-npm install
+npm run install
 ```
+## Front-End
 
-### Compile and Hot-Reload for Development
+Start the front-end development server:
 
 ```sh
 npm run dev
 ```
+## Back-End
 
-### Compile and Minify for Production
+Start the back-end server:
 
 ```sh
-npm run build
+npm run server
 ```
+
+If port 5000 is not working, try changing the port or using another available port on your machine.
+
+## Notes
+
+Run front-end and back-end in separate terminals.
+
+Make sure both are running for the application to work.
