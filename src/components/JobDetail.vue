@@ -57,10 +57,10 @@
 
             <div class="p-6 bg-gray-50 border-t flex flex-col sm:flex-row gap-3 justify-end">
                 <button class="px-6 py-3 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
-                    Save Job
+                    Edit
                 </button>
-                <button class="px-6 py-3 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-                    Apply Now
+                <button class="px-6 py-3 rounded-lg bg-red-600 text-white hover:bg-indigo-700 transition">
+                    Delete
                 </button>
             </div>
         </div>
