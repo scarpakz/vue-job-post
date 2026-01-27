@@ -21,16 +21,22 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white transition">Home</a></li>
-                    <li><a href="#" class="hover:text-white transition">Jobs</a></li>
-                    <li><a href="#" class="hover:text-white transition">Add Job</a></li>
+                    <li>
+                        <RouterLink :to="{ name: 'home' }"  aria-current="page" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-white text-white hover:text-indigo-800">Home</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink :to="{ name: 'jobs' }" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white hover:text-indigo-800">Jobs</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink :to="{ name: 'home' }" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white hover:text-indigo-800">Add Job</RouterLink>
+                    </li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <p class="text-gray-400">123 Street Name, City, Country</p>
-                    <p class="text-gray-400 mt-2">Email: info@jasonjavier.com</p>
+                    <p class="text-gray-400 mt-2">Email: jasonjjavier@gmail.com</p>
                     <p class="text-gray-400 mt-2">Phone: +1 234 567 890</p>
                 </div>
 

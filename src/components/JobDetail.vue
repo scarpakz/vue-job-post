@@ -92,10 +92,9 @@ const data = ref();
 /**
  * Match data from the given params Id
  */
-const onLoadJobDetail = async () => {
+const onLoadJobDetail = () => {
     const arrData = jobs.value.filter(item => item.id === Number(paramsId))
     data.value = arrData[0]
-    console.log(arrData)
 }
 
 onMounted(() => {
