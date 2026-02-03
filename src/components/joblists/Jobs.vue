@@ -18,6 +18,7 @@
                     <span class="size-3 animate-ping rounded-full bg-indigo-600 [animation-delay:0.4s]"></span>
                 </Loader>
             </div>
+
             <div class="flex justify-center mt-8"
             v-if="showButton"
             >
@@ -36,9 +37,9 @@
 <script setup>
 import {ref, onMounted} from 'vue'
 import { RouterLink } from 'vue-router'
+import { appConfig } from '@/config/config.js'
 import Lists from '@/components/joblists/Lists.vue'
 import Loader from '@/components/Loader.vue'
-import joblists from '@/mockdata/joblists.json'
 import axios from 'axios'
 
 defineProps({
@@ -58,7 +59,7 @@ const isLoading = ref(true)
  */
 const getData = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/jobs')
+        const response = await axios.get(`${appConfig.appBackend}/jobs`)
         jobs.value = response.data
     } catch (e) { console.error(e.status, e.message)
     } finally { isLoading.value = false }
