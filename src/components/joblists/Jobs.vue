@@ -3,11 +3,10 @@
         <section class="py-16 bg-gray-50">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-12">Available Jobs</h2>
-                
                 <!-- Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" v-if="!isLoading">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" v-if="!state.isLoading">
                     <Lists 
-                    v-for="job in jobs.slice(0, limit || jobs.length)"
+                    v-for="job in state.jobs.slice(0, limit || state.jobs.length)"
                     :job="job"
                     :key="job.id"
                     />
@@ -35,12 +34,14 @@
 </template>
   
 <script setup>
-import {ref, onMounted} from 'vue'
+import {ref, onMounted, reactive} from 'vue'
 import { RouterLink } from 'vue-router'
-import { appConfig } from '@/config/config.js'
 import Lists from '@/components/joblists/Lists.vue'
 import Loader from '@/components/Loader.vue'
 import axios from 'axios'
+import {
+    API_GET_JOBS
+} from '@/api/jobs.js'
 
 defineProps({
     limit: { 
@@ -51,21 +52,23 @@ defineProps({
         default: false
     }
 })
-const jobs = ref([])
-const isLoading = ref(true)
+const state = reactive({
+    jobs: [],
+    isLoading: true
+})
 
 /**
  * Get all jobs
  */
-const getData = async () => {
+const getJobsData = async () => {
     try {
-        const response = await axios.get(`${appConfig.appBackend}/jobs`)
-        jobs.value = response.data
-    } catch (e) { console.error(e.status, e.message)
-    } finally { isLoading.value = false }
+        const response = await API_GET_JOBS()
+        state.jobs = response
+    } catch (e) { console.error(e)
+    } finally { state.isLoading = false }
 }
 onMounted(() => {
-    getData()
+    getJobsData()
 })
 
 </script>
