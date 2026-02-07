@@ -3,10 +3,23 @@
         <section class="py-16 bg-gray-50">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-12">Available Jobs</h2>
+                <label for="Headline">
+                    <span class="text-sm font-medium text-gray-700"> Show by </span>
+
+                    <select v-model="selectedQuantity" name="Headline" id="Headline" class="m-3 p-2 w-50 cursor-pointer rounded border-gray-300 shadow-sm sm:text-sm">
+                        <option 
+                            v-for="item in filterQuantity" 
+                            :key="item"
+                            :value="item"
+                            >
+                            {{ item === 'all' ? 'Show All Jobs' : item }}
+                        </option>
+                    </select>
+                </label>
                 <!-- Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" v-if="!state.isLoading">
                     <Lists 
-                    v-for="job in state.jobs.slice(0, limit || state.jobs.length)"
+                    v-for="job in state.jobs.slice(0, (selectedQuantity === 'all' ? state.jobs.length : selectedQuantity) || state.jobs.length)"
                     :job="job"
                     :key="job.id"
                     />
@@ -44,9 +57,6 @@ import {
 } from '@/api/jobs.js'
 
 defineProps({
-    limit: { 
-        default: 10
-    },
     showButton: {
         type: Boolean,
         default: false
@@ -56,7 +66,8 @@ const state = reactive({
     jobs: [],
     isLoading: true
 })
-
+const filterQuantity = ref([3,6,10,'all'])
+const selectedQuantity = ref(3)
 /**
  * Get all jobs
  */

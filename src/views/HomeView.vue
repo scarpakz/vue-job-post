@@ -6,7 +6,7 @@
     :backgroundImage=heroImage
     />
     <CardFinder />
-    <Jobs :limit="6" :showButton="true" />
+    <Jobs :showButton="true" />
     <Testimony />
 </template>
 
