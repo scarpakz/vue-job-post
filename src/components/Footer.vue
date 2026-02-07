@@ -6,14 +6,11 @@
                     <h2 class="text-2xl font-bold mb-4">Jason Javier</h2>
                     <p class="text-gray-400">Turning ideas into reality, one project at a time. Reach out, explore, and grow with us.</p>
                     <div class="flex mt-4 space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition text-2xl">
-                            <i class="pi pi-facebook"></i>
+                        <a target="_blank" href="https://github.com/scarpakz" class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="pi pi-github"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-2xl">
-                            <i class="pi pi-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-2xl">
-                            <i class="pi pi-instagram"></i>
+                        <a target="_blank" href="https://www.linkedin.com/in/jason-javier-2365a1130/" class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="pi pi-linkedin"></i>
                         </a>
                     </div>
                 </div>

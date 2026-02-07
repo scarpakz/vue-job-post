@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import navbarbg from '@/images/3d-briefcase.png';
+import navbarbg from '@/assets/images/3d-briefcase.png';
 import { RouterLink, useRoute } from 'vue-router';
 
 const isActiveLink = (routePath) => {
