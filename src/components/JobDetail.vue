@@ -1,22 +1,22 @@
 <template>
     <div class="min-h-screen bg-gray-100 py-10 px-4">
-        <div v-if="data" class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div v-if="!isLoading" class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
             <!-- Header -->
             <div class="p-6 border-b">
                 <span class="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-3 py-1 rounded-full">
-                    {{ data.type }}
+                    {{ job?.type }}
                 </span>
 
                 <h1 class="mt-4 text-3xl font-bold text-gray-900">
-                    {{ data.title }}
+                    {{ job?.title }}
                 </h1>
 
                 <div class="mt-2 flex flex-wrap gap-4 text-gray-600">
                     <span class="flex items-center gap-1">
-                    <i class="pi pi-map-marker text-red-700"></i> {{ data.location }}
+                    <i class="pi pi-map-marker text-red-700"></i> {{ job?.location }}
                     </span>
                     <span class="flex items-center gap-1">
-                    {{ data.salary }}
+                    {{ job?.salary }}
                     </span>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                     Job Description
                     </h2>
                     <p class="text-gray-700 leading-relaxed">
-                    {{ data.description }}
+                    {{ job?.description }}
                     </p>
                 </div>
 
@@ -37,7 +37,7 @@
                     Responsibilities
                     </h2>
                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                        <li v-for="i in data.responsibilities" :key="i">
+                        <li v-for="i in job?.responsibilities" :key="i">
                             {{ i }}
                         </li>
                     </ul>
@@ -48,7 +48,7 @@
                     Requirements
                     </h2>
                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                        <li v-for="i in data.requirements" :key="i">
+                        <li v-for="i in job?.requirements" :key="i">
                             {{ i }}
                         </li>
                     </ul>
@@ -81,21 +81,27 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import joblists from '@/mockdata/joblists.json';
 import Loader from '@/components/Loader.vue';
+import {
+    API_GET_JOB_DETAIL
+} from '@/api/jobs.js'
 
-const jobs = ref(joblists);
 const route = useRoute();
 const paramsId = route.params.id;
-const data = ref();
+const job = ref({})
+const isLoading = ref(false)
 
-/**
- * Match data from the given params Id
- */
-// TODO: Fetch through API
-const onLoadJobDetail = () => {
-    const arrData = jobs.value.filter(item => item.id === Number(paramsId))
-    data.value = arrData[0]
+const onLoadJobDetail = async () => {
+    try {
+        isLoading.value = true
+        const response = await API_GET_JOB_DETAIL(paramsId)
+        job.value = response
+    } catch (e) {
+        console.error(e)
+        throw e
+    } finally {
+        isLoading.value = false
+    }
 }
 
 onMounted(() => {

@@ -14,3 +14,16 @@ export const API_GET_JOBS = async () => {
         throw e
     }
 }
+
+/**
+ * Get Job Detail
+ */
+export const API_GET_JOB_DETAIL = async (id) => {
+    try {
+        const response = await axios.get(`${appConfig.appBackend}/jobs/${id}`)
+        return response.data
+    } catch(e) {
+        console.error(e)
+        throw e
+    }
+}
