@@ -27,3 +27,15 @@ export const API_GET_JOB_DETAIL = async (id) => {
         throw e
     }
 }
+/**
+ * Add Job
+ */
+export const API_POST_ADD_JOB = async (data) => {
+    try {
+        const response = await axios.post(`${appConfig.appBackend}/jobs`, data)
+        return response.data
+    } catch (e) {
+        console.error(e)
+        throw e
+    }
+}

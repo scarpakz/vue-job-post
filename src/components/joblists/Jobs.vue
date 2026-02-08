@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto mt-16">
+    <div class="mx-auto">
         <section class="py-16 bg-gray-50">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-12">Available Jobs</h2>

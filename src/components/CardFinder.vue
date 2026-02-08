@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
         
         <HomeCardFinder bg="bg-gray-100 hover:bg-gray-200 transition duration-300 ease-in-out shadow-md hover:shadow-xl rounded-xl p-8">
           <h2 class="text-black font-extrabold text-3xl md:text-4xl text-center md:text-left mb-3">

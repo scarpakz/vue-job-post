@@ -1,204 +1,266 @@
 {
-    "jobs": [
-        {
-          "id": 1,
-          "type": "Full Time",
-          "title": "Frontend Developer",
-          "location": "New York, NY",
-          "salary": "$60,000 - $80,000/year",
-          "description": "Build, maintain, and optimize modern user interfaces for web applications using Vue.js and Tailwind CSS. Collaborate with designers and backend developers to deliver clean, responsive, and accessible components.",
-          "responsibilities": [
-            "Develop responsive UI components using Vue.js",
-            "Implement designs using Tailwind CSS",
-            "Collaborate with designers and backend developers",
-            "Optimize applications for performance and accessibility"
-          ],
-          "requirements": [
-            "Experience with Vue.js",
-            "Strong HTML, CSS, and JavaScript skills",
-            "Familiarity with Tailwind CSS",
-            "Attention to UI/UX best practices"
-          ]
-        },
-        {
-          "id": 2,
-          "type": "Full Time",
-          "title": "Backend Developer",
-          "location": "San Francisco, CA",
-          "salary": "$70,000 - $95,000/year",
-          "description": "Design and maintain scalable backend systems and APIs using Node.js. Ensure data integrity, security, and high availability across services.",
-          "responsibilities": [
-            "Build RESTful APIs",
-            "Manage databases and server logic",
-            "Implement authentication and authorization",
-            "Optimize backend performance"
-          ],
-          "requirements": [
-            "Experience with Node.js",
-            "Knowledge of SQL or NoSQL databases",
-            "Understanding of API design",
-            "Problem-solving skills"
-          ]
-        },
-        {
-          "id": 3,
-          "type": "Full Time",
-          "title": "Full Stack Developer",
-          "location": "Austin, TX",
-          "salary": "$75,000 - $100,000/year",
-          "description": "Work on both frontend and backend systems to deliver complete web solutions from concept to deployment.",
-          "responsibilities": [
-            "Develop frontend and backend features",
-            "Integrate APIs and third-party services",
-            "Collaborate with cross-functional teams",
-            "Maintain code quality and documentation"
-          ],
-          "requirements": [
-            "Experience with frontend and backend frameworks",
-            "Strong JavaScript knowledge",
-            "Understanding of databases",
-            "Ability to work independently"
-          ]
-        },
-        {
-          "id": 4,
-          "type": "Full Time",
-          "title": "Mobile Developer",
-          "location": "Seattle, WA",
-          "salary": "$65,000 - $85,000/year",
-          "description": "Build cross-platform mobile applications with a focus on performance, usability, and clean architecture.",
-          "responsibilities": [
-            "Develop mobile apps using Flutter or React Native",
-            "Integrate APIs",
-            "Optimize app performance",
-            "Fix bugs and maintain releases"
-          ],
-          "requirements": [
-            "Experience with mobile frameworks",
-            "Understanding of mobile UI principles",
-            "API integration experience",
-            "Testing and debugging skills"
-          ]
-        },
-        {
-          "id": 5,
-          "type": "Full Time",
-          "title": "UI/UX Designer",
-          "location": "Los Angeles, CA",
-          "salary": "$55,000 - $75,000/year",
-          "description": "Design intuitive and visually appealing interfaces that enhance user experience across platforms.",
-          "responsibilities": [
-            "Create wireframes and prototypes",
-            "Collaborate with developers",
-            "Conduct usability testing",
-            "Refine designs based on feedback"
-          ],
-          "requirements": [
-            "Experience with design tools",
-            "Strong UI/UX fundamentals",
-            "Attention to detail",
-            "Good communication skills"
-          ]
-        },
-        {
-          "id": 6,
-          "type": "Full Time",
-          "title": "DevOps Engineer",
-          "location": "Boston, MA",
-          "salary": "$80,000 - $110,000/year",
-          "description": "Manage cloud infrastructure and deployment pipelines to ensure reliable and scalable systems.",
-          "responsibilities": [
-            "Maintain CI/CD pipelines",
-            "Manage cloud infrastructure",
-            "Monitor system performance",
-            "Improve deployment workflows"
-          ],
-          "requirements": [
-            "Experience with cloud platforms",
-            "Knowledge of CI/CD tools",
-            "Linux system administration",
-            "Security best practices"
-          ]
-        },
-        {
-          "id": 7,
-          "type": "Contract",
-          "title": "QA Engineer",
-          "location": "Remote",
-          "salary": "$40/hr - $60/hr",
-          "description": "Ensure software quality through manual and automated testing processes.",
-          "responsibilities": [
-            "Write and execute test cases",
-            "Report and track bugs",
-            "Collaborate with developers",
-            "Improve testing workflows"
-          ],
-          "requirements": [
-            "Experience in software testing",
-            "Attention to detail",
-            "Knowledge of testing tools",
-            "Strong analytical skills"
-          ]
-        },
-        {
-          "id": 8,
-          "type": "Part Time",
-          "title": "Technical Writer",
-          "location": "Remote",
-          "salary": "$30/hr - $45/hr",
-          "description": "Create clear and concise technical documentation for developers and end users.",
-          "responsibilities": [
-            "Write technical documentation",
-            "Collaborate with engineering teams",
-            "Maintain documentation updates",
-            "Ensure clarity and accuracy"
-          ],
-          "requirements": [
-            "Strong writing skills",
-            "Technical background",
-            "Attention to detail",
-            "Ability to simplify complex topics"
-          ]
-        },
-        {
-          "id": 9,
-          "type": "Full Time",
-          "title": "Product Manager",
-          "location": "Chicago, IL",
-          "salary": "$85,000 - $120,000/year",
-          "description": "Lead product development from ideation to launch while aligning business and technical goals.",
-          "responsibilities": [
-            "Define product requirements",
-            "Coordinate with teams",
-            "Manage product roadmap",
-            "Analyze user feedback"
-          ],
-          "requirements": [
-            "Product management experience",
-            "Strong communication skills",
-            "Understanding of agile workflows",
-            "Leadership ability"
-          ]
-        },
-        {
-          "id": 10,
-          "type": "Internship",
-          "title": "Junior Web Developer",
-          "location": "Toronto, ON",
-          "salary": "$20/hr - $25/hr",
-          "description": "Assist in building and maintaining web applications while gaining hands-on development experience.",
-          "responsibilities": [
-            "Assist with frontend development",
-            "Fix minor bugs",
-            "Learn best coding practices",
-            "Support senior developers"
-          ],
-          "requirements": [
-            "Basic HTML, CSS, and JavaScript knowledge",
-            "Willingness to learn",
-            "Good communication skills",
-            "Team-oriented mindset"
-          ]
-        }
-    ]
+  "jobs": [
+    {
+      "id": 1,
+      "type": "Full Time",
+      "title": "Frontend Developer",
+      "location": "New York, NY",
+      "salary": "$60,000 - $80,000/year",
+      "description": "Build and optimize modern user interfaces using Vue.js and Tailwind CSS.",
+      "responsibilities": [
+        "Develop responsive UI components",
+        "Implement designs using Tailwind CSS",
+        "Collaborate with backend developers",
+        "Ensure accessibility best practices"
+      ],
+      "requirements": [
+        "Vue.js experience",
+        "HTML, CSS, JavaScript",
+        "Tailwind CSS"
+      ],
+      "company": {
+        "name": "PixelCraft Labs",
+        "description": "A creative software studio focused on building modern, user-centric web applications.",
+        "contactEmail": "careers@pixelcraftlabs.com",
+        "contactPhone": "212-555-0198"
+      }
+    },
+    {
+      "id": 2,
+      "type": "Full Time",
+      "title": "Backend Developer",
+      "location": "Toronto, ON",
+      "salary": "$75,000 - $95,000/year",
+      "description": "Design and maintain scalable backend services and APIs.",
+      "responsibilities": [
+        "Build REST APIs",
+        "Manage databases",
+        "Optimize backend performance"
+      ],
+      "requirements": [
+        "Node.js",
+        "Express",
+        "SQL/NoSQL"
+      ],
+      "company": {
+        "name": "CloudNova Systems",
+        "description": "CloudNova Systems delivers secure, scalable backend solutions for enterprise clients.",
+        "contactEmail": "hr@cloudnova.io",
+        "contactPhone": "416-555-0112"
+      }
+    },
+    {
+      "id": 3,
+      "type": "Part Time",
+      "title": "UI/UX Designer",
+      "location": "Vancouver, BC",
+      "salary": "$40/hr",
+      "description": "Create visually engaging and intuitive user experiences.",
+      "responsibilities": [
+        "Design wireframes",
+        "Create UI mockups",
+        "Conduct usability testing"
+      ],
+      "requirements": [
+        "Figma",
+        "UX principles",
+        "Strong design portfolio"
+      ],
+      "company": {
+        "name": "Northshore Digital",
+        "description": "A Vancouver-based digital agency specializing in branding and UX design.",
+        "contactEmail": "design@northshoredigital.ca",
+        "contactPhone": "604-555-0174"
+      }
+    },
+    {
+      "id": 4,
+      "type": "Full Time",
+      "title": "Full Stack Developer",
+      "location": "Calgary, AB",
+      "salary": "$85,000 - $110,000/year",
+      "description": "Develop and maintain full stack web applications.",
+      "responsibilities": [
+        "Frontend and backend development",
+        "API integration",
+        "Testing and deployment"
+      ],
+      "requirements": [
+        "Vue.js",
+        "Node.js",
+        "Git"
+      ],
+      "company": {
+        "name": "Prairie Tech Group",
+        "description": "Prairie Tech Group builds scalable software solutions for growing businesses.",
+        "contactEmail": "jobs@prairietechgroup.ca",
+        "contactPhone": "403-555-0149"
+      }
+    },
+    {
+      "id": 5,
+      "type": "Contract",
+      "title": "QA Tester",
+      "location": "Remote",
+      "salary": "$30/hr",
+      "description": "Ensure software quality through manual and automated testing.",
+      "responsibilities": [
+        "Write test cases",
+        "Perform manual testing",
+        "Report bugs"
+      ],
+      "requirements": [
+        "QA experience",
+        "Attention to detail"
+      ],
+      "company": {
+        "name": "VerifySoft Inc.",
+        "description": "VerifySoft Inc. specializes in software testing and quality assurance services.",
+        "contactEmail": "contracts@verifysoft.com",
+        "contactPhone": "800-555-0221"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Full Time",
+      "title": "DevOps Engineer",
+      "location": "Montreal, QC",
+      "salary": "$90,000 - $120,000/year",
+      "description": "Maintain CI/CD pipelines and cloud infrastructure.",
+      "responsibilities": [
+        "Manage CI/CD pipelines",
+        "Monitor systems",
+        "Cloud infrastructure management"
+      ],
+      "requirements": [
+        "AWS",
+        "Docker",
+        "Linux"
+      ],
+      "company": {
+        "name": "InfraWave Technologies",
+        "description": "InfraWave Technologies delivers reliable DevOps and cloud infrastructure solutions.",
+        "contactEmail": "devops@infrawave.tech",
+        "contactPhone": "514-555-0186"
+      }
+    },
+    {
+      "id": 7,
+      "type": "Internship",
+      "title": "Junior Web Developer",
+      "location": "Winnipeg, MB",
+      "salary": "$20/hr",
+      "description": "Support development teams while learning real-world workflows.",
+      "responsibilities": [
+        "Fix bugs",
+        "Build components",
+        "Assist senior developers"
+      ],
+      "requirements": [
+        "Basic HTML/CSS",
+        "JavaScript fundamentals"
+      ],
+      "company": {
+        "name": "LaunchCode Studio",
+        "description": "LaunchCode Studio helps junior developers grow through mentorship-driven projects.",
+        "contactEmail": "interns@launchcodestudio.ca",
+        "contactPhone": "204-555-0163"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Full Time",
+      "title": "Product Manager",
+      "location": "Ottawa, ON",
+      "salary": "$95,000 - $120,000/year",
+      "description": "Lead product vision and execution across teams.",
+      "responsibilities": [
+        "Create product roadmaps",
+        "Manage stakeholders",
+        "Define feature requirements"
+      ],
+      "requirements": [
+        "Agile methodology",
+        "Leadership skills"
+      ],
+      "company": {
+        "name": "GovTech Innovations",
+        "description": "GovTech Innovations builds digital solutions for public-sector organizations.",
+        "contactEmail": "careers@govtechinnovations.ca",
+        "contactPhone": "613-555-0127"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Part Time",
+      "title": "Technical Support Specialist",
+      "location": "Halifax, NS",
+      "salary": "$25/hr",
+      "description": "Provide technical support to customers and internal teams.",
+      "responsibilities": [
+        "Handle support tickets",
+        "Troubleshoot issues",
+        "Maintain documentation"
+      ],
+      "requirements": [
+        "Strong communication skills",
+        "Technical troubleshooting"
+      ],
+      "company": {
+        "name": "Atlantic Support Services",
+        "description": "Atlantic Support Services offers customer-focused IT support solutions.",
+        "contactEmail": "support@atlanticservices.ca",
+        "contactPhone": "902-555-0191"
+      }
+    },
+    {
+      "id": 10,
+      "type": "Full Time",
+      "title": "Mobile App Developer",
+      "location": "Edmonton, AB",
+      "salary": "$80,000 - $100,000/year",
+      "description": "Build and maintain cross-platform mobile applications.",
+      "responsibilities": [
+        "Develop mobile apps",
+        "Fix bugs",
+        "Optimize performance"
+      ],
+      "requirements": [
+        "Flutter or React Native",
+        "API integration"
+      ],
+      "company": {
+        "name": "AppForge Solutions",
+        "description": "AppForge Solutions creates high-quality mobile applications for startups and enterprises.",
+        "contactEmail": "mobile@appforge.io",
+        "contactPhone": "780-555-0138"
+      }
+    },
+    {
+      "id": 4032,
+      "title": "asd",
+      "location": "asd",
+      "type": "Full Time",
+      "salary": "$50,000 - $70,000/year",
+      "description": "asdasdasd",
+      "responsibilities": [
+        "asd",
+        "asd",
+        "asd",
+        "asaaaaaa"
+      ],
+      "requirements": [
+        "123",
+        "123123",
+        "123123",
+        "551112"
+      ],
+      "company": {
+        "name": "asd",
+        "description": "asd",
+        "contactEmail": "asd@email.com",
+        "contactPhone": "231289789789"
+      }
+    }
+  ]
 }
