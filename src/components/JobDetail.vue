@@ -1,6 +1,9 @@
 <template>
     <div class="min-h-screen bg-gray-100 py-10 px-4">
-        <div v-if="!isLoading" class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="max-w-7xl mx-auto py-3">
+            <BackButton />
+        </div>
+        <div v-if="!isLoading" class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
             <!-- Header -->
             <div class="p-6 border-b">
                 <span class="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-3 py-1 rounded-full">
@@ -82,6 +85,7 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import Loader from '@/components/Loader.vue';
+import BackButton from '@/components/BackButton.vue';
 import {
     API_GET_JOB_DETAIL
 } from '@/api/jobs.js'
