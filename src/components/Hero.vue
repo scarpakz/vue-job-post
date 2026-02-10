@@ -28,9 +28,9 @@
             <RouterLink :to="{ name: 'jobs'}" class="cursor-pointer px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-500/25">
               Browse Jobs
             </RouterLink>
-            <button class="cursor-pointer px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold rounded-xl border border-white/20 transition-all">
+            <RouterLink :to="{name: 'add-job'}" class="cursor-pointer px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold rounded-xl border border-white/20 transition-all">
               Post a Role
-            </button>
+            </RouterLink>
           </div>
 
         </div>

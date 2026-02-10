@@ -78,7 +78,7 @@
             </div>
     
             <!-- Submit -->
-            <button type="submit"
+            <button :disabled="isSubmittingValue.value" type="submit"
             class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition cursor-pointer">
             Add Job
             </button>
@@ -88,12 +88,19 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
+import { useToast } from 'vue-toastification'
+import { useRouter } from 'vue-router'
 import {
     API_POST_ADD_JOB
 } from '@/api/jobs.js'
 
-const form = reactive({
+const toast = useToast()
+const router = useRouter()
+const isSubmittingValue = ref(false)
+
+// Use for reset
+const state = {
     id: '',
     title:'',
     location:'',
@@ -108,25 +115,37 @@ const form = reactive({
         contactEmail:'',
         contactPhone:''
     }
-})
+}
+
+const form = reactive({...state}) // Use for binding
 
 const addResponsibility = () => {
     form.responsibilities.push('')
 }
-
 const addRequirement = () => {
     form.requirements.push('')
 }
-
+const resetForm = () => {
+    Object.assign(form, structuredClone(state))
+}
 const submitForm = async () => {
     try {
+        isSubmittingValue.value = true
         form.id = Math.floor(Math.random() * 9000) + 1000;
+        let tempId = form.id
+
         const response = await API_POST_ADD_JOB(form)
-        console.log(response)
-        // TODO: add reset form
+        if(!response) {
+            toast.error('Error! Please check field information.')
+            return
+        }
+        
+        isSubmittingValue.value = false
+        resetForm()
+        toast.success('Job was successfully added.')
+        router.push(`/jobs/${tempId}`)
     } catch (e) {
-        console.error(e)
-        throw e
+        toast.error(e.message || 'Something went wrong.')
     }
 }
 </script>

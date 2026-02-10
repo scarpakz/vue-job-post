@@ -235,32 +235,6 @@
         "contactEmail": "mobile@appforge.io",
         "contactPhone": "780-555-0138"
       }
-    },
-    {
-      "id": 4032,
-      "title": "asd",
-      "location": "asd",
-      "type": "Full Time",
-      "salary": "$50,000 - $70,000/year",
-      "description": "asdasdasd",
-      "responsibilities": [
-        "asd",
-        "asd",
-        "asd",
-        "asaaaaaa"
-      ],
-      "requirements": [
-        "123",
-        "123123",
-        "123123",
-        "551112"
-      ],
-      "company": {
-        "name": "asd",
-        "description": "asd",
-        "contactEmail": "asd@email.com",
-        "contactPhone": "231289789789"
-      }
     }
   ]
 }
