@@ -73,8 +73,8 @@ const selectedQuantity = ref(3)
  */
 const getJobsData = async () => {
     try {
-        const response = await API_GET_JOBS()
-        state.jobs = response
+        const {data, status, statusText} = await API_GET_JOBS()
+        state.jobs = data
     } catch (e) { console.error(e)
     } finally { state.isLoading = false }
 }

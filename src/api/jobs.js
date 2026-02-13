@@ -3,12 +3,11 @@ import {appConfig} from '@/config/config.js'
 
 /**
  * Get All Jobs
- * @returns jobs data
  */
 export const API_GET_JOBS = async () => {
     try {
-        const response = await axios.get(`${appConfig.appBackend}/jobs`)
-        return response.data
+        const {data, status, statusText} = await axios.get(`${appConfig.appBackend}/jobs`)
+        return {data, status, statusText}
     } catch(e) {
         console.error(e)
         throw e
@@ -20,8 +19,8 @@ export const API_GET_JOBS = async () => {
  */
 export const API_GET_JOB_DETAIL = async (id) => {
     try {
-        const response = await axios.get(`${appConfig.appBackend}/jobs/${id}`)
-        return response.data
+        const {data, status, statusText} = await axios.get(`${appConfig.appBackend}/jobs/${id}`)
+        return {data, status, statusText}
     } catch(e) {
         console.error(e)
         throw e
@@ -30,10 +29,22 @@ export const API_GET_JOB_DETAIL = async (id) => {
 /**
  * Add Job
  */
-export const API_POST_ADD_JOB = async (data) => {
+export const API_POST_ADD_JOB = async (newJobData) => {
     try {
-        const response = await axios.post(`${appConfig.appBackend}/jobs`, data)
-        return response.data
+        const {data, status, statusText} = await axios.post(`${appConfig.appBackend}/jobs`, newJobData)
+        return {data, status, statusText}
+    } catch (e) {
+        console.error(e)
+        throw e
+    }
+}
+/**
+ * Delete job
+ */
+export const API_POST_DELETE_JOB = async (id) => {
+    try {
+        const {data, status, statusText} = await axios.delete(`${appConfig.appBackend}/jobs/${id}`)
+        return {data, status, statusText}
     } catch (e) {
         console.error(e)
         throw e

@@ -212,29 +212,6 @@
         "contactEmail": "support@atlanticservices.ca",
         "contactPhone": "902-555-0191"
       }
-    },
-    {
-      "id": 10,
-      "type": "Full Time",
-      "title": "Mobile App Developer",
-      "location": "Edmonton, AB",
-      "salary": "$80,000 - $100,000/year",
-      "description": "Build and maintain cross-platform mobile applications.",
-      "responsibilities": [
-        "Develop mobile apps",
-        "Fix bugs",
-        "Optimize performance"
-      ],
-      "requirements": [
-        "Flutter or React Native",
-        "API integration"
-      ],
-      "company": {
-        "name": "AppForge Solutions",
-        "description": "AppForge Solutions creates high-quality mobile applications for startups and enterprises.",
-        "contactEmail": "mobile@appforge.io",
-        "contactPhone": "780-555-0138"
-      }
     }
   ]
 }

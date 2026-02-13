@@ -134,12 +134,12 @@ const submitForm = async () => {
         form.id = Math.floor(Math.random() * 9000) + 1000;
         let tempId = form.id
 
-        const response = await API_POST_ADD_JOB(form)
-        if(!response) {
+        const {data, status, statusText} = await API_POST_ADD_JOB(form)
+        if(!data) {
             toast.error('Error! Please check field information.')
             return
         }
-        
+
         isSubmittingValue.value = false
         resetForm()
         toast.success('Job was successfully added.')

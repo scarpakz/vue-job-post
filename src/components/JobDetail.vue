@@ -62,7 +62,9 @@
                 <button class="px-6 py-3 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
                     Edit
                 </button>
-                <button class="px-6 py-3 rounded-lg bg-red-600 text-white hover:bg-indigo-700 transition">
+                <button
+                @click="deleteJob(job?.id)"
+                class="px-6 py-3 rounded-lg bg-red-600 text-white hover:bg-indigo-700 transition cursor-pointer">
                     Delete
                 </button>
             </div>
@@ -83,14 +85,18 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import Loader from '@/components/Loader.vue';
 import BackButton from '@/components/BackButton.vue';
+import { useToast } from 'vue-toastification'
 import {
-    API_GET_JOB_DETAIL
+    API_GET_JOB_DETAIL,
+    API_POST_DELETE_JOB
 } from '@/api/jobs.js'
 
 const route = useRoute();
+const router = useRouter();
+const toast = useToast();
 const paramsId = route.params.id;
 const job = ref({})
 const isLoading = ref(false)
@@ -98,11 +104,27 @@ const isLoading = ref(false)
 const onLoadJobDetail = async () => {
     try {
         isLoading.value = true
-        const response = await API_GET_JOB_DETAIL(paramsId)
-        job.value = response
+        const {data, status, statusText} = await API_GET_JOB_DETAIL(paramsId)
+        job.value = data
     } catch (e) {
         console.error(e)
         throw e
+    } finally {
+        isLoading.value = false
+    }
+}
+
+const deleteJob = async (jobId) => {
+    try {
+        isLoading.value = true
+        const confirmation = window.confirm('Do you wish to delete this job permanently?')
+        if(confirmation){
+            const {data,status,statusText} = await API_POST_DELETE_JOB(jobId)
+            toast.success('Job successfully deleted.') 
+            router.push({name:'jobs'})
+        }
+    } catch (e) {
+        toast.error('Failed to delete job.')
     } finally {
         isLoading.value = false
     }
