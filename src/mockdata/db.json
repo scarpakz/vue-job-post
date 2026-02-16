@@ -2,16 +2,17 @@
   "jobs": [
     {
       "id": 1,
-      "title": "Frontend Developer",
+      "title": "Frontend Developerzz",
       "location": "New York, NY",
       "type": "Full Time",
-      "salary": "$60,000 - $85,000/year",
+      "salary": "$65,000 - $85,000/year",
       "description": "Build and optimize modern user interfaces using Vue.js and Tailwind CSS.",
       "responsibilities": [
         "Develop responsive UI components",
         "Implement designs using Tailwind CSS",
         "Collaborate with backend developers",
-        "Ensure accessibility best practices"
+        "Ensure accessibility best practices",
+        "Test 5"
       ],
       "requirements": [
         "Vue.js experience",
@@ -27,20 +28,23 @@
     },
     {
       "id": 2,
-      "type": "Full Time",
       "title": "Backend Developer",
       "location": "Toronto, ON",
+      "type": "Full Time",
       "salary": "$75,000 - $95,000/year",
       "description": "Design and maintain scalable backend services and APIs.",
       "responsibilities": [
-        "Build REST APIs",
+        "Build REST APIsazx",
         "Manage databases",
-        "Optimize backend performance"
+        "Optimize backend performance",
+        "asd"
       ],
       "requirements": [
         "Node.js",
         "Express",
-        "SQL/NoSQL"
+        "SQL/NoSQL",
+        "Fastify",
+        "qqqq"
       ],
       "company": {
         "name": "CloudNova Systems",
@@ -122,19 +126,21 @@
     },
     {
       "id": 7,
-      "type": "Internship",
       "title": "Junior Web Developer",
       "location": "Winnipeg, MB",
+      "type": "Internship",
       "salary": "$20/hr",
       "description": "Support development teams while learning real-world workflows.",
       "responsibilities": [
         "Fix bugs",
         "Build components",
-        "Assist senior developers"
+        "Assist senior developers",
+        "12345"
       ],
       "requirements": [
         "Basic HTML/CSS",
-        "JavaScript fundamentals"
+        "JavaScript fundamentals",
+        "aaaaa"
       ],
       "company": {
         "name": "LaunchCode Studio",

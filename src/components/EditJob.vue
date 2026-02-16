@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto max-w-7xl p-6">
+    <div class="mx-auto max-w-7xl p-6" v-if="!isSubmittingValue">
         <h1 class="mb-4 text-3xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Edit Job</h1>
         <form @submit.prevent="submitForm" class="space-y-8 bg-white p-8 rounded-xl shadow">
             <!-- Job Info -->
@@ -80,12 +80,20 @@
     
         </form>
     </div>
+    <div v-else class="max-w-4xl mx-auto overflow-hidden">
+        <Loader>
+            <span class="size-3 animate-ping rounded-full bg-indigo-600"></span>
+            <span class="size-3 animate-ping rounded-full bg-indigo-600 [animation-delay:0.2s]"></span>
+            <span class="size-3 animate-ping rounded-full bg-indigo-600 [animation-delay:0.4s]"></span>
+        </Loader>
+    </div>
 </template>
 
 <script setup>
 import { reactive, ref, onMounted } from 'vue'
 import { useToast } from 'vue-toastification'
 import { useRouter, useRoute } from 'vue-router'
+import Loader from '@/components/Loader.vue'
 import {
     API_POST_UPDATE_JOB,
     API_GET_JOB_DETAIL
@@ -131,7 +139,7 @@ const submitForm = async () => {
     try {
         isSubmittingValue.value = true
 
-        const {data, status, statusText} = await API_POST_UPDATE_JOB({id: form.id, form})
+        const {data} = await API_POST_UPDATE_JOB({id: form.id, form})
         if(!data) {
             toast.error('Error! Please check field information.')
             return
@@ -147,36 +155,9 @@ const submitForm = async () => {
 }
 const loadJobDetail = async () => {
     try {
-        const response = await API_GET_JOB_DETAIL(paramsId)
-        const {
-            id,
-            type,
-            title,
-            location,
-            salary,
-            company,
-            description,
-            requirements,
-            responsibilities,
-        } = response.data
-        
-        requirements.forEach((item, index) => {
-            form.requirements[index] = item
-        })
-        responsibilities.forEach((item, index) => {
-            form.responsibilities[index] = item
-        })
-        form.id = id
-        form.type = type
-        form.title = title
-        form.location = location
-        form.salary = salary || 'Under $50k'
-        form.description = description
-        form.company.name = company.name
-        form.company.description = company.description
-        form.company.contactEmail = company.contactEmail
-        form.company.contactPhone = company.contactPhone
-
+        const { data } = await API_GET_JOB_DETAIL(paramsId)
+        Object.assign(form, data)
+        form.salary = data.salary || 'Under $50k' // custom - db.json is a mockup
     } catch (e) {
         toast.error(e.message || 'Something went wrong. Try again later.')
     }
