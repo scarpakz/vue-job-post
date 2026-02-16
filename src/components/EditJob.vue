@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto max-w-7xl p-6">
-        <h1 class="mb-4 text-3xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Add Job</h1>
+        <h1 class="mb-4 text-3xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Edit Job</h1>
         <form @submit.prevent="submitForm" class="space-y-8 bg-white p-8 rounded-xl shadow">
             <!-- Job Info -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -20,13 +20,8 @@
             </select>
     
             <!-- Salary -->
-            <select v-model="form.salary" class="input">
-                <option value="">Select Salary Range</option>
-                <option selected>Under $50k</option>
-                <option>$50,000 - $70,000/year</option>
-                <option>$70,000 - $90,000/year</option>
-                <option>$90,000+</option>
-            </select>
+            <input v-model="form.salary" type="text" placeholder="Salary"
+                class="input"/>
             </div>
     
             <!-- Description -->
@@ -79,8 +74,8 @@
     
             <!-- Submit -->
             <button :disabled="isSubmittingValue.value" type="submit"
-            class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition cursor-pointer">
-            Add Job
+            class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition cursor-pointer">
+            Update Job
             </button>
     
         </form>
@@ -88,19 +83,23 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref, onMounted } from 'vue'
 import { useToast } from 'vue-toastification'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import {
-    API_POST_ADD_JOB
+    API_POST_UPDATE_JOB,
+    API_GET_JOB_DETAIL
 } from '@/api/jobs.js'
 
 const toast = useToast()
 const router = useRouter()
+const route = useRoute()
+
 const isSubmittingValue = ref(false)
+const paramsId = route.params.id
 
 // Use for reset
-const state = {
+let state = {
     id: '',
     title:'',
     location:'',
@@ -117,7 +116,7 @@ const state = {
     }
 }
 
-const form = reactive({...state}) // Use for binding
+let form = reactive({...state}) // Use for binding
 
 const addResponsibility = () => {
     form.responsibilities.push('')
@@ -131,10 +130,8 @@ const resetForm = () => {
 const submitForm = async () => {
     try {
         isSubmittingValue.value = true
-        form.id = Math.floor(Math.random() * 9000) + 1000;
-        let tempId = form.id
 
-        const {data, status, statusText} = await API_POST_ADD_JOB(form)
+        const {data, status, statusText} = await API_POST_UPDATE_JOB({id: form.id, form})
         if(!data) {
             toast.error('Error! Please check field information.')
             return
@@ -142,12 +139,52 @@ const submitForm = async () => {
 
         isSubmittingValue.value = false
         resetForm()
-        toast.success('Job was successfully added.')
-        router.push(`/jobs/${tempId}`)
+        toast.success('Job was successfully updated.')
+        router.push(`/jobs/${paramsId}`)
     } catch (e) {
-        toast.error(e.message || 'Something went wrong.')
+        toast.error(e.message || 'Something went wrong. Try again later.')
     }
 }
+const loadJobDetail = async () => {
+    try {
+        const response = await API_GET_JOB_DETAIL(paramsId)
+        const {
+            id,
+            type,
+            title,
+            location,
+            salary,
+            company,
+            description,
+            requirements,
+            responsibilities,
+        } = response.data
+        
+        requirements.forEach((item, index) => {
+            form.requirements[index] = item
+        })
+        responsibilities.forEach((item, index) => {
+            form.responsibilities[index] = item
+        })
+        form.id = id
+        form.type = type
+        form.title = title
+        form.location = location
+        form.salary = salary || 'Under $50k'
+        form.description = description
+        form.company.name = company.name
+        form.company.description = company.description
+        form.company.contactEmail = company.contactEmail
+        form.company.contactPhone = company.contactPhone
+
+    } catch (e) {
+        toast.error(e.message || 'Something went wrong. Try again later.')
+    }
+}
+
+onMounted(() => {
+    loadJobDetail()
+})
 </script>
 
 <style>

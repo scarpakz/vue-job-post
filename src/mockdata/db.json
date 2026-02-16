@@ -2,10 +2,10 @@
   "jobs": [
     {
       "id": 1,
-      "type": "Full Time",
       "title": "Frontend Developer",
       "location": "New York, NY",
-      "salary": "$60,000 - $80,000/year",
+      "type": "Full Time",
+      "salary": "$60,000 - $85,000/year",
       "description": "Build and optimize modern user interfaces using Vue.js and Tailwind CSS.",
       "responsibilities": [
         "Develop responsive UI components",
@@ -47,30 +47,6 @@
         "description": "CloudNova Systems delivers secure, scalable backend solutions for enterprise clients.",
         "contactEmail": "hr@cloudnova.io",
         "contactPhone": "416-555-0112"
-      }
-    },
-    {
-      "id": 3,
-      "type": "Part Time",
-      "title": "UI/UX Designer",
-      "location": "Vancouver, BC",
-      "salary": "$40/hr",
-      "description": "Create visually engaging and intuitive user experiences.",
-      "responsibilities": [
-        "Design wireframes",
-        "Create UI mockups",
-        "Conduct usability testing"
-      ],
-      "requirements": [
-        "Figma",
-        "UX principles",
-        "Strong design portfolio"
-      ],
-      "company": {
-        "name": "Northshore Digital",
-        "description": "A Vancouver-based digital agency specializing in branding and UX design.",
-        "contactEmail": "design@northshoredigital.ca",
-        "contactPhone": "604-555-0174"
       }
     },
     {

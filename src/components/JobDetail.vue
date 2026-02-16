@@ -59,9 +59,12 @@
             </div>
 
             <div class="p-6 bg-gray-50 border-t flex flex-col sm:flex-row gap-3 justify-end">
-                <button class="px-6 py-3 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
+                <RouterLink 
+                :to="{name: 'job-edit', id: {paramsId}}"
+                class="px-6 py-3 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                >
                     Edit
-                </button>
+                </RouterLink>
                 <button
                 @click="deleteJob(job?.id)"
                 class="px-6 py-3 rounded-lg bg-red-600 text-white hover:bg-indigo-700 transition cursor-pointer">
@@ -85,7 +88,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute, useRouter, RouterLink } from 'vue-router';
 import Loader from '@/components/Loader.vue';
 import BackButton from '@/components/BackButton.vue';
 import { useToast } from 'vue-toastification'

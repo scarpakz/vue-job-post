@@ -50,3 +50,15 @@ export const API_POST_DELETE_JOB = async (id) => {
         throw e
     }
 }
+/**
+ * Update job
+ */
+export const API_POST_UPDATE_JOB = async (updatedJobData) => {
+    try {
+        const {data, status, statusText} = await axios.put(`${appConfig.appBackend}/jobs/${updatedJobData.id}`, updatedJobData.form)
+        return {data, status, statusText}
+    } catch (e) {
+        console.error(e)
+        throw e
+    }
+}
