@@ -24,12 +24,13 @@
           <p class="text-black/80 mb-6 text-center md:text-left text-lg">
             Post jobs and connect with developers that match your needs
           </p>
-          <button 
+          <RouterLink 
+            :to="{ name: 'add-job' }"
             class="inline-block bg-black hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-lg transition transform hover:-translate-y-1 hover:shadow-lg text-center w-full md:w-auto"
             type="button"
           >
             Add Job
-          </button>
+          </RouterLink>
         </HomeCardFinder>
   
       </div>
